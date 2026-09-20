@@ -1,8 +1,8 @@
-# Differential Net-Moving 复现包
+# Differential Net-Moving 复现实验
 
 本仓库整理本地 Differential Net-Moving / DiffNet 原型及其审计记录。
 
-本仓库有意限定为“部分复现包”。它不是论文作者的官方实现，不包含完整的 Xplace 或 DREAMPlace 源码树，不包含 ISPD2015 benchmark 数据，也不声称完成论文的完整复现。
+本仓库实际为部分复现包。它不是论文作者的官方实现，不包含完整的 Xplace 或 DREAMPlace 源码树，不包含 ISPD2015 benchmark 数据，也不声称完成论文的完整复现。
 
 ## 仓库内容
 
