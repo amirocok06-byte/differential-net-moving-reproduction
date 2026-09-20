@@ -1,0 +1,153 @@
+{
+  "stage": "P1A_STAGE4D_B5",
+  "design": "mgc_des_perf_1",
+  "field_manifest": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/field_manifest.json",
+  "input_maps": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/field_pre_p1a_b4r/routing_maps.pt",
+  "source_dmd_sha256": "01a088d4d07366e730941e0e43ae27df5c7cfb493f39be5bc83cde23b53b5d5a",
+  "source_cap_sha256": "2032a79b6b2ad1c42c7350fa76796f059b445164ce052de247929b672fc39e5d",
+  "input_dmd_shape": [
+    128,
+    128
+  ],
+  "input_cap_shape": [
+    128,
+    128
+  ],
+  "num_routing_layers": 5,
+  "grid_x": 128,
+  "grid_y": 128,
+  "zero_capacity_entries": 0,
+  "positive_capacity_entries": 16384,
+  "implementation_file": "src/core/p1a/poisson_congestion.py",
+  "implementation_callable": "build_poisson_field",
+  "congestion_source": "rho=where(cap==0,0,dmd/cap); source=rho-rho.mean()",
+  "layer_aggregation": "persisted router_adapter aggregate (demand/capacity over routing layers)",
+  "zero_capacity_policy": "zero demand ratio; reject positive demand",
+  "normalization": "mean removal",
+  "source_pre_solve_transform": "solve_poisson_neumann centers source again",
+  "source_mean_before_transform": 0.6566606760025024,
+  "source_mean_after_transform": -6.984919309616089e-08,
+  "solver": "relaxed Jacobi, 2000 iterations, relaxation=0.8",
+  "boundary": "replicated padding / zero normal flux Neumann",
+  "dc_mode": "subtract mean after source construction and each iteration",
+  "solver_normalization": "mean-zero phi each iteration",
+  "runtime_seconds": 0.1242632159992354,
+  "artifacts": {
+    "poisson_rho_raw": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/poisson_field_b5/poisson_rho_raw.pt",
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "min": 0.0,
+      "max": 1.3971037864685059,
+      "mean": 0.6566606760025024,
+      "l1": 10758.728515625,
+      "sha256": "756fe05b820e38192ee2a78240aabc6865ba7bed42e66a251361dc2ff3938f8a"
+    },
+    "poisson_source": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/poisson_field_b5/poisson_source.pt",
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "min": -0.6566606760025024,
+      "max": 0.7404431104660034,
+      "mean": -6.984919309616089e-08,
+      "l1": 2718.716796875,
+      "sha256": "b2e41c33d02bb212ed38fd5efeafc76b1eb6a40b3bee400d0ecc7c310e96889b"
+    },
+    "potential": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/poisson_field_b5/potential.pt",
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "min": -53.03374481201172,
+      "max": 58.97883605957031,
+      "mean": 1.564621925354004e-07,
+      "l1": 357560.78125,
+      "sha256": "808ddef8a23ef79c09b8de86854c6c0a94387b6f25e81b092fc4cd67a581bb8c"
+    },
+    "potential_gradient_x": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/poisson_field_b5/potential_gradient_x.pt",
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "min": -2.673048973083496,
+      "max": 2.5362892150878906,
+      "mean": -0.07033473253250122,
+      "l1": 13364.21875,
+      "sha256": "712880616f9ce0296232d10d1da062430f61e246bf59e1fddb38086ff81f3040"
+    },
+    "potential_gradient_y": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/poisson_field_b5/potential_gradient_y.pt",
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "min": -2.7921571731567383,
+      "max": 1.9719181060791016,
+      "mean": -0.08269652724266052,
+      "l1": 12551.8115234375,
+      "sha256": "740aa1b3f1f9f1d4957ba224565f086e9c80818d26da828d4a286c2560e02c49"
+    },
+    "field_x": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/poisson_field_b5/field_x.pt",
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "min": -2.5362892150878906,
+      "max": 2.673048973083496,
+      "mean": 0.07033473253250122,
+      "l1": 13364.21875,
+      "sha256": "669a698171873c1a0c8923409900b26a37726e84f7b872328f83e41f80424594"
+    },
+    "field_y": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/poisson_field_b5/field_y.pt",
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "min": -1.9719181060791016,
+      "max": 2.7921571731567383,
+      "mean": 0.08269652724266052,
+      "l1": 12551.8115234375,
+      "sha256": "ef818bdcc79af05f912b71b23c847e3b1a26c2bed53579d3d84f12162a695550"
+    }
+  },
+  "field_semantics": "potential_gradient=grad(phi); field=-grad(phi)",
+  "algorithm1_executed": false,
+  "algorithm2_executed": false,
+  "poisson_closure": "READY"
+}

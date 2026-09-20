@@ -1,0 +1,113 @@
+[   2.093] Command line: python /home/amirocok/xplace-ispd2015-work/main.py --dataset_root /home/amirocok/xplace-ispd2015-work/data/raw --dataset ispd2015_fix --design_name mgc_fft_1 --gpu 0 --num_threads 2 --legalization False --detail_placement False --use_route_force False --use_cell_inflate False --final_route_eval False --draw_placement False --write_global_placement True --result_dir /home/amirocok/xplace-ispd2015-work/result --exp_id _sm89_gp_baseline
+[   2.093] log file at /home/amirocok/xplace-ispd2015-work/result/2026-08-25-15:05:34_sm89_gp_baseline_mgc_fft_1/log/test.log
+[   2.093] 
+[   2.093] dataset_root: /home/amirocok/xplace-ispd2015-work/data/raw
+[   2.093] dataset: ispd2015_fix
+[   2.093] design_name: mgc_fft_1
+[   2.093] custom_path: 
+[   2.093] custom_json: 
+[   2.093] given_solution: 
+[   2.093] load_from_raw: True
+[   2.093] run_all: False
+[   2.093] seed: 0
+[   2.093] gpu: 0
+[   2.093] num_threads: 2
+[   2.093] deterministic: True
+[   2.093] global_placement: True
+[   2.093] lr: 0.01
+[   2.093] inner_iter: 10000
+[   2.093] wa_coeff: 4.0
+[   2.093] num_bin_x: 512
+[   2.093] num_bin_y: 512
+[   2.093] density_weight: 8e-05
+[   2.093] density_weight_coef: 1.05
+[   2.093] target_density: 1.0
+[   2.093] use_filler: True
+[   2.094] noise_ratio: 0.025
+[   2.094] ignore_net_degree: 100
+[   2.094] use_eplace_nesterov: True
+[   2.094] clamp_node: True
+[   2.094] use_precond: True
+[   2.094] stop_overflow: 0.07
+[   2.094] enable_skip_update: True
+[   2.094] enable_sample_force: True
+[   2.094] mixed_size: False
+[   2.094] use_cell_inflate: False
+[   2.094] min_area_inc: 0.01
+[   2.094] use_route_force: False
+[   2.094] route_freq: 1000
+[   2.094] num_route_iter: 400
+[   2.094] route_weight: 0
+[   2.094] congest_weight: 0
+[   2.094] pseudo_weight: 0
+[   2.094] visualize_cgmap: False
+[   2.094] timing_opt: False
+[   2.094] timing_freq: 1
+[   2.095] calibration: True
+[   2.095] calibration_step: 0.1
+[   2.095] timing_start_iter: 100
+[   2.095] timing_init_weight: 0.05
+[   2.095] decay_factor: 0.3
+[   2.095] decay_boost: 3
+[   2.095] wire_resistance_per_micron: 2.535
+[   2.095] wire_capacitance_per_micron: 1.6e-16
+[   2.095] legalization: False
+[   2.095] detail_placement: False
+[   2.095] dp_engine: default
+[   2.095] eval_by_external: False
+[   2.095] eval_engine: ntuplace4dr
+[   2.095] final_route_eval: False
+[   2.095] log_freq: 100
+[   2.095] verbose_cpp_log: False
+[   2.095] cpp_log_level: 2
+[   2.095] result_dir: /home/amirocok/xplace-ispd2015-work/result
+[   2.095] exp_id: 2026-08-25-15:05:34_sm89_gp_baseline_mgc_fft_1
+[   2.095] log_dir: log
+[   2.096] log_name: test.log
+[   2.096] eval_dir: eval
+[   2.096] draw_placement: False
+[   2.096] write_placement: True
+[   2.096] write_global_placement: True
+[   2.096] output_dir: output
+[   2.096] output_prefix: placement
+[   2.096] 
+[   2.123] =================
+[   2.356] Design Info:
+benchmark: ispd2015_fix
+design_name: mgc_fft_1
+lef: /home/amirocok/xplace-ispd2015-work/data/raw/ispd2015_fix/mgc_fft_1/mgc_fft_1.lef
+def: /home/amirocok/xplace-ispd2015-work/data/raw/ispd2015_fix/mgc_fft_1/mgc_fft_1.def
+[   2.356] loading from original benchmark...
+[   2.641] [33;21mWARNING[0m Given num_bin_y 512 is larger than num_rows 132. Use (num_bin_x=128, num_bin_y=128) instead
+[   2.641] Start place ispd2015_fix/mgc_fft_1
+[   2.641] Use Nesterov optimizer!
+[   3.272] 
+===================
+#nodes = 35291, #nets = 33307, #pins = 104385
+#Mov = 32281, #Fix = 0, #IOPin = 3010, #Blkg = 0
+#ConnMov = 32281, #FloatMov = 0, #ConnFix = 0, #FloatFix = 0, #ConnIOPin = 3010, #FloatIOPin = 0
+#Macros = 3010, #MovMacros = 0, #FixMacros = 3010
+Core Info [0.0, 1325.0, 0.0, 1320.0]
+Site Width = 200, Row Height = 2000
+#Bins = (128, 128), UnitLen = (10.35156, 10.31250)
+target density = 0.83
+===================
+[   3.272] PlaceData(ispd2015_fix/mgc_fft_1, device=cuda:0, die_info=[4], die_ll=[2], die_ur=[2], hpwl_scale=[2], hyperedge_index=[2, 104385], hyperedge_list=[104385], hyperedge_list_end=[33307], is_macro=[35291], is_mov_macro=[35291], microns=1000, net_mask=[33307], net_names=[33307], net_to_num_pins=[33307], net_weight=[33307], node2pin_index=[2, 104385], node2pin_list=[104385], node2pin_list_end=[35291], node_area=[35291, 1], node_id2region_id=[35291], node_lpos=[35291, 2], node_names=[32281], node_pos=[35291, 2], node_size=[35291, 2], node_special_type=[35291], node_to_num_pins=[35291, 1], pin_id2net_id=[104385], pin_id2node_id=[104385], pin_names=[104385], pin_rel_cpos=[104385, 2], pin_rel_lpos=[104385, 2], pin_size=[104385, 2], region_boxes=[1, 4], region_boxes_end=[1], regions=[1], unit_len=[2])
+[   3.273] [(0, 32281, 'Mov'), (32281, 32281, 'FloatMov'), (32281, 32281, 'Fix'), (32281, 35291, 'IOPin'), (35291, 35291, 'Blkg'), (35291, 35291, 'FloatIOPin'), (35291, 35291, 'FloatFix')]
+[   3.302] [33;21mWARNING[0m Stdcell util 0.84 is larger than target density 0.83. Increase target density to 0.84.
+[   3.306] [33;21mWARNING[0m num_fillers[0] is smaller or equal to 0. Please make sure target_density[0.84] is larger than movable cell utilization[1461240.00]. use_filler is disable.
+[   3.306] DieArea: 1.749E+06 FixArea: 2.882E+03 (0.2%) PlaceableArea: 1.746E+06 (99.8%) MovArea: 1.461E+06 (83.5%) FillerArea: 0.000E+00 (0.0%) MovMacroArea: 0.000E+00 (0.0%) MovStdCellArea: 1.461E+06 (83.5%)
+[   3.487] start gp
+[   3.490] iter: 0 | masked_hpwl: 3.77E+06 overflow: 0.9993 obj: 7.5219E+05 density_weight: 5.0391E-08 wa_coeff: 8.2656E+02
+[   3.602] iter: 100 | masked_hpwl: 1.85E+06 overflow: 0.6495 obj: 6.6897E+05 density_weight: 1.0297E-06 wa_coeff: 1.3752E+02
+[   3.740] iter: 200 | masked_hpwl: 1.84E+06 overflow: 0.6529 obj: 6.6112E+05 density_weight: 5.1209E-05 wa_coeff: 1.3995E+02
+[   3.882] iter: 300 | masked_hpwl: 1.84E+06 overflow: 0.6219 obj: 7.1646E+05 density_weight: 1.9628E-03 wa_coeff: 1.1942E+02
+[   4.018] iter: 400 | masked_hpwl: 1.92E+06 overflow: 0.3511 obj: 1.3620E+06 density_weight: 9.5940E-02 wa_coeff: 2.9996E+01
+[   4.162] iter: 500 | masked_hpwl: 1.90E+06 overflow: 0.2621 obj: 1.4949E+06 density_weight: 3.5274E-01 wa_coeff: 1.8950E+01
+[   4.311] iter: 600 | masked_hpwl: 1.91E+06 overflow: 0.0799 obj: 1.6953E+06 density_weight: 1.9395E+01 wa_coeff: 7.4576E+00
+[   4.374] iter: 638 | masked_hpwl: 1.91E+06 overflow: 0.0444 obj: 1.7388E+06 density_weight: 1.0308E+02 wa_coeff: 6.2189E+00
+[   4.374] Find best solution (type 2 OVFL driven) masked_hpwl: 1.9146E+06 overflow: 0.0444
+[   4.374] GP Stop! #Iters 638 masked_hpwl: 1.914569E+06 overflow: 0.0444 GP Time: 0.8872s perIterTime: 0.001388s
+[   4.377] After GP, best solution eval, exact HPWL: 1.917193E+06 exact Overflow: 0.1335
+[   5.020] Write placement in /home/amirocok/xplace-ispd2015-work/result/2026-08-25-15:05:34_sm89_gp_baseline_mgc_fft_1/output/placement_mgc_fft_1_gp. Time: 0.0657
+[   5.049] GP Time: 0.8872 LG Time: -1.0000 DP Time: -1.0000 Total Place Time: 2.6929

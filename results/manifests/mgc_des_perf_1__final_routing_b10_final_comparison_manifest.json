@@ -1,0 +1,354 @@
+{
+  "stage": "P1A_STAGE4D_B10",
+  "design": "mgc_des_perf_1",
+  "family": "mgc_des_perf",
+  "cohort_index": 1,
+  "pair_manifest": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/canonical_pair_b9/pair_manifest.json",
+  "lifecycle_manifest": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/canonical_pair_b9/b9a_lifecycle_alignment_manifest.json",
+  "control_placement_sha": "a7efc2a96180e31591326f5fdd8723ac1d6948f35352e1280936d204ae4392b1",
+  "p1a_placement_sha": "ec25f63234c294c2c0596de9e597b5760e3c49fa44b679b66265bd3c24d565f7",
+  "physical_mapping": {
+    "optimizer_rows": 113173,
+    "movable_physical_rows": 112644,
+    "filler_rows": 529,
+    "fixed_io_rows": 374,
+    "router_updated_movables": 112644,
+    "fillers_excluded": 529
+  },
+  "router_provenance": {
+    "gpugr_path": "/home/amirocok/eda-research/diff-net-moving-attribution/worktrees/p1a-stage4c-routing-feedback/build_stage4c_gpugr/cpp_to_py/gpugr/gpugr.cpython-39-x86_64-linux-gnu.so",
+    "gpugr_sha256": "e7933ca5c786b281670675d55e7905c4548e1b7d95dcd9af9c1ec92c4f617410",
+    "libflute_path": "/home/amirocok/eda-research/diff-net-moving-attribution/worktrees/p1a-stage4c-routing-feedback/build_stage4c_gpugr/thirdparty/flute/libflute.so",
+    "libflute_sha256": "dfece3b119c755761fcea2a1351c0db1ad489c75474cbee0a4f2f89b8dc3185d",
+    "flute_init_count": 1,
+    "grid": [
+      128,
+      128
+    ],
+    "layers": 5
+  },
+  "only_scientific_variable": "PLACEMENT",
+  "router_config_equal": true,
+  "control_a": {
+    "stage": "P1A_STAGE4D_B4",
+    "design": "mgc_des_perf_1",
+    "position_path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/control_position.pt",
+    "position_sha256": "a7efc2a96180e31591326f5fdd8723ac1d6948f35352e1280936d204ae4392b1",
+    "baseline_def": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/gp_capture/2026-09-02-11:11:53_mgc_des_perf_1/output/stage4d_mgc_des_perf_1_gp.def",
+    "baseline_def_sha256": "60a87a544d67c7215f10667e3ec3f85692e4a377cca95c4b3ae2a2d38453b774",
+    "optimizer_position_rows": 113173,
+    "num_movable_nodes": 112644,
+    "num_fillers": 529,
+    "num_fixed_or_terminal_nodes": 374,
+    "physical_database_nodes": 113018,
+    "router_update_node_count": 112644,
+    "fixed_nodes_preserved": true,
+    "filler_excluded_from_routing": true,
+    "grid": [
+      128,
+      128
+    ],
+    "layers": 5,
+    "routed_nets": 112878,
+    "runtime_seconds": 2.441725561000112,
+    "gr_metrics": [
+      28321,
+      5562364.72,
+      404109,
+      18352.78125,
+      1.5360527038574219,
+      1.32109534740448
+    ],
+    "dmd_sha256": "24cf17ad0ac266a27d97b616b1b9243c14e5f680a302f384cffd6175068f1e12",
+    "cap_sha256": "2032a79b6b2ad1c42c7350fa76796f059b445164ce052de247929b672fc39e5d",
+    "dmd_shape": [
+      5,
+      128,
+      128
+    ],
+    "cap_shape": [
+      5,
+      128,
+      128
+    ],
+    "dmd_finite": true,
+    "cap_finite": true,
+    "init_call_count": 1
+  },
+  "p1a_a": {
+    "stage": "P1A_STAGE4D_B4",
+    "design": "mgc_des_perf_1",
+    "position_path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/p1a_position.pt",
+    "position_sha256": "ec25f63234c294c2c0596de9e597b5760e3c49fa44b679b66265bd3c24d565f7",
+    "baseline_def": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/gp_capture/2026-09-02-11:11:53_mgc_des_perf_1/output/stage4d_mgc_des_perf_1_gp.def",
+    "baseline_def_sha256": "60a87a544d67c7215f10667e3ec3f85692e4a377cca95c4b3ae2a2d38453b774",
+    "optimizer_position_rows": 113173,
+    "num_movable_nodes": 112644,
+    "num_fillers": 529,
+    "num_fixed_or_terminal_nodes": 374,
+    "physical_database_nodes": 113018,
+    "router_update_node_count": 112644,
+    "fixed_nodes_preserved": true,
+    "filler_excluded_from_routing": true,
+    "grid": [
+      128,
+      128
+    ],
+    "layers": 5,
+    "routed_nets": 112878,
+    "runtime_seconds": 2.492375476999996,
+    "gr_metrics": [
+      28518,
+      5565267.18,
+      404223,
+      18201.95703125,
+      1.536236047744751,
+      1.3218934535980225
+    ],
+    "dmd_sha256": "2d853252522bbe18c34c91f29f686254a6e4e60cb4ed39d70ad9680eae4f0502",
+    "cap_sha256": "2032a79b6b2ad1c42c7350fa76796f059b445164ce052de247929b672fc39e5d",
+    "dmd_shape": [
+      5,
+      128,
+      128
+    ],
+    "cap_shape": [
+      5,
+      128,
+      128
+    ],
+    "dmd_finite": true,
+    "cap_finite": true,
+    "init_call_count": 1
+  },
+  "control_b": {
+    "stage": "P1A_STAGE4D_B4",
+    "design": "mgc_des_perf_1",
+    "position_path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/control_position.pt",
+    "position_sha256": "a7efc2a96180e31591326f5fdd8723ac1d6948f35352e1280936d204ae4392b1",
+    "baseline_def": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/gp_capture/2026-09-02-11:11:53_mgc_des_perf_1/output/stage4d_mgc_des_perf_1_gp.def",
+    "baseline_def_sha256": "60a87a544d67c7215f10667e3ec3f85692e4a377cca95c4b3ae2a2d38453b774",
+    "optimizer_position_rows": 113173,
+    "num_movable_nodes": 112644,
+    "num_fillers": 529,
+    "num_fixed_or_terminal_nodes": 374,
+    "physical_database_nodes": 113018,
+    "router_update_node_count": 112644,
+    "fixed_nodes_preserved": true,
+    "filler_excluded_from_routing": true,
+    "grid": [
+      128,
+      128
+    ],
+    "layers": 5,
+    "routed_nets": 112878,
+    "runtime_seconds": 2.440507006999951,
+    "gr_metrics": [
+      28321,
+      5562364.72,
+      404109,
+      18352.78125,
+      1.5360527038574219,
+      1.32109534740448
+    ],
+    "dmd_sha256": "24cf17ad0ac266a27d97b616b1b9243c14e5f680a302f384cffd6175068f1e12",
+    "cap_sha256": "2032a79b6b2ad1c42c7350fa76796f059b445164ce052de247929b672fc39e5d",
+    "dmd_shape": [
+      5,
+      128,
+      128
+    ],
+    "cap_shape": [
+      5,
+      128,
+      128
+    ],
+    "dmd_finite": true,
+    "cap_finite": true,
+    "init_call_count": 1
+  },
+  "p1a_b": {
+    "stage": "P1A_STAGE4D_B4",
+    "design": "mgc_des_perf_1",
+    "position_path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/p1a_position.pt",
+    "position_sha256": "ec25f63234c294c2c0596de9e597b5760e3c49fa44b679b66265bd3c24d565f7",
+    "baseline_def": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/gp_capture/2026-09-02-11:11:53_mgc_des_perf_1/output/stage4d_mgc_des_perf_1_gp.def",
+    "baseline_def_sha256": "60a87a544d67c7215f10667e3ec3f85692e4a377cca95c4b3ae2a2d38453b774",
+    "optimizer_position_rows": 113173,
+    "num_movable_nodes": 112644,
+    "num_fillers": 529,
+    "num_fixed_or_terminal_nodes": 374,
+    "physical_database_nodes": 113018,
+    "router_update_node_count": 112644,
+    "fixed_nodes_preserved": true,
+    "filler_excluded_from_routing": true,
+    "grid": [
+      128,
+      128
+    ],
+    "layers": 5,
+    "routed_nets": 112878,
+    "runtime_seconds": 2.401099615000021,
+    "gr_metrics": [
+      28518,
+      5565267.18,
+      404223,
+      18201.95703125,
+      1.536236047744751,
+      1.3218934535980225
+    ],
+    "dmd_sha256": "2d853252522bbe18c34c91f29f686254a6e4e60cb4ed39d70ad9680eae4f0502",
+    "cap_sha256": "2032a79b6b2ad1c42c7350fa76796f059b445164ce052de247929b672fc39e5d",
+    "dmd_shape": [
+      5,
+      128,
+      128
+    ],
+    "cap_shape": [
+      5,
+      128,
+      128
+    ],
+    "dmd_finite": true,
+    "cap_finite": true,
+    "init_call_count": 1
+  },
+  "metrics": {
+    "overflow_nets": {
+      "control": 28321,
+      "p1a": 28518,
+      "delta": 197,
+      "relative": 0.006955969068888811
+    },
+    "gr_wirelength": {
+      "control": 5562364.72,
+      "p1a": 5565267.18,
+      "delta": 2902.4599999999627,
+      "relative": 0.0005218032520528361
+    },
+    "vias": {
+      "control": 404109,
+      "p1a": 404223,
+      "delta": 114,
+      "relative": 0.00028210210611493433
+    },
+    "estimated_shorts": {
+      "control": 18352.78125,
+      "p1a": 18201.95703125,
+      "delta": -150.82421875,
+      "relative": -0.008218057889727204
+    },
+    "rc_hor": {
+      "control": 1.5360527038574219,
+      "p1a": 1.536236047744751,
+      "delta": 0.00018334388732910156,
+      "relative": 0.00011936041443674302
+    },
+    "rc_ver": {
+      "control": 1.32109534740448,
+      "p1a": 1.3218934535980225,
+      "delta": 0.0007981061935424805,
+      "relative": 0.0006041245963892749
+    }
+  },
+  "capacity": {
+    "placement_independent": true,
+    "exact_equal": true,
+    "l1_diff": 0.0,
+    "max_diff": 0.0
+  },
+  "demand": {
+    "exact_equal": false,
+    "l1_diff": 40308.76953125,
+    "l2_diff": 233.07960510253906,
+    "max_diff": 6.598075866699219,
+    "differing_entries": 52933,
+    "per_layer_l1_diff": [
+      1010.203857421875,
+      7891.54296875,
+      9791.326171875,
+      10806.2939453125,
+      10809.4033203125
+    ]
+  },
+  "offline_overflow": {
+    "control": {
+      "positive_entries": 908,
+      "sum": 85.9301986694336,
+      "max": 0.4276982545852661
+    },
+    "p1a": {
+      "positive_entries": 875,
+      "sum": 84.9555892944336,
+      "max": 0.43264448642730713
+    },
+    "positive_count_delta": -33,
+    "sum_delta": -0.974609375,
+    "max_delta": 0.004946231842041016
+  },
+  "spatial": {
+    "improved_entries": 499,
+    "worsened_entries": 424,
+    "unchanged_entries": 15461,
+    "total_local_improvement": 7.404277324676514,
+    "total_local_worsening": 6.429671764373779,
+    "max_local_improvement": 0.07002031803131104,
+    "max_local_worsening": 0.07498025894165039,
+    "newly_positive_entries": 40,
+    "newly_positive_overflow_sum": 0.5277281999588013,
+    "pattern": "MIXED"
+  },
+  "routed_net_count_delta": 197,
+  "routed_net_count_effect": "BENIGN_PLACEMENT_DEPENDENT",
+  "reproducibility": {
+    "repeat_executed": true,
+    "control_native_metrics_exact_equal": true,
+    "p1a_native_metrics_exact_equal": true,
+    "control_dmd_exact_equal": true,
+    "p1a_dmd_exact_equal": true,
+    "control_cap_exact_equal": true,
+    "p1a_cap_exact_equal": true,
+    "noise_floor": "ZERO"
+  },
+  "final_direction": "MIXED",
+  "classification_rationale": "P1A worsens overflow-net count, GR wirelength, vias, and RC metrics slightly, but improves estimated shorts; no scalar score is used. Effect is above zero router noise.",
+  "pure_two_pin_context": {
+    "g_multi_l1": 0,
+    "g_total_equals_g_two": true,
+    "two_pin_nets": 72617,
+    "multi_pin_nets": 40261,
+    "two_pin_fraction": 0.6433228795690923,
+    "k0_fraction": 0.8732253,
+    "NC": 6672,
+    "NC_fraction": 0.0592308511771599,
+    "lambda2": 0.04928470030426979
+  },
+  "cross_design": {
+    "mgc_fft_1": "WORSENED",
+    "mgc_des_perf_1": "MIXED",
+    "relation": "DIFFERENT"
+  },
+  "family_status": "PARTIAL",
+  "family_members_evaluated": "1/3",
+  "routing_artifacts": {
+    "control_a": {
+      "metadata": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/control_a/metadata.json",
+      "maps": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/control_a/routing_maps.pt"
+    },
+    "p1a_a": {
+      "metadata": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/p1a_a/metadata.json",
+      "maps": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/p1a_a/routing_maps.pt"
+    },
+    "control_b": {
+      "metadata": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/control_b/metadata.json",
+      "maps": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/control_b/routing_maps.pt"
+    },
+    "p1a_b": {
+      "metadata": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/p1a_b/metadata.json",
+      "maps": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/final_routing_b10/p1a_b/routing_maps.pt"
+    }
+  },
+  "upstream_preservation": "PASS",
+  "final_readback": "PASS",
+  "routing_executed": true
+}

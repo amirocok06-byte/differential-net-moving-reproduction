@@ -1,0 +1,210 @@
+{
+  "design": "mgc_fft_1",
+  "seed": 1000,
+  "tensor_layout": "[layer,ix,iy]",
+  "layers": 5,
+  "gcell_shape": [
+    128,
+    128
+  ],
+  "m1_included": true,
+  "gcell_steps": [
+    2070,
+    2070
+  ],
+  "stats": {
+    "wire": {
+      "shape": [
+        5,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": 0.0,
+      "max": 805.0,
+      "mean": 6.740685939788818,
+      "nan": 0,
+      "inf": 0
+    },
+    "via": {
+      "shape": [
+        5,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": 0.0,
+      "max": 77.89175415039062,
+      "mean": 0.13509345054626465,
+      "nan": 0,
+      "inf": 0
+    },
+    "capacity": {
+      "shape": [
+        5,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": 10.0,
+      "max": 11.0,
+      "mean": 10.3515625,
+      "nan": 0,
+      "inf": 0
+    },
+    "dmd_2d": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": 5.0,
+      "max": 3293.392578125,
+      "mean": 34.37889862060547,
+      "nan": 0,
+      "inf": 0
+    },
+    "cap_2d": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": 50.0,
+      "max": 55.0,
+      "mean": 51.7578125,
+      "nan": 0,
+      "inf": 0
+    },
+    "routing_ratio": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": 0.09615384787321091,
+      "max": 62.13948440551758,
+      "mean": 0.6633869409561157,
+      "nan": 0,
+      "inf": 0
+    },
+    "routing_overflow_map": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": 0.0,
+      "max": 61.13948440551758,
+      "mean": 0.16928958892822266,
+      "nan": 0,
+      "inf": 0
+    },
+    "poisson_rho_raw": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": 0.09615384787321091,
+      "max": 62.13948440551758,
+      "mean": 0.6633869409561157,
+      "nan": 0,
+      "inf": 0
+    },
+    "poisson_source": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": -0.5672330856323242,
+      "max": 61.476097106933594,
+      "mean": -2.2351741790771484e-08,
+      "nan": 0,
+      "inf": 0
+    },
+    "potential": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": -112.71092987060547,
+      "max": 1201.332275390625,
+      "mean": 7.62939453125e-06,
+      "nan": 0,
+      "inf": 0
+    },
+    "potential_gradient_x": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": -34.4205322265625,
+      "max": 0.16672897338867188,
+      "mean": -3.194453239440918,
+      "nan": 0,
+      "inf": 0
+    },
+    "potential_gradient_y": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": -32.61834716796875,
+      "max": 0.310211181640625,
+      "mean": -2.985426664352417,
+      "nan": 0,
+      "inf": 0
+    },
+    "field_x": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": -0.16672897338867188,
+      "max": 34.4205322265625,
+      "mean": 3.194453239440918,
+      "nan": 0,
+      "inf": 0
+    },
+    "field_y": {
+      "shape": [
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "device": "cuda:0",
+      "min": -0.310211181640625,
+      "max": 32.61834716796875,
+      "mean": 2.985426664352417,
+      "nan": 0,
+      "inf": 0
+    }
+  },
+  "zero_capacity_dmd0": 0,
+  "zero_capacity_positive_dmd": 0,
+  "runtime_seconds": {
+    "ggr": 38.34608188099992,
+    "adapter": 0.09238346199981606,
+    "poisson": 50.820117168999786,
+    "total": 89.25858251199952
+  }
+}

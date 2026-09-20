@@ -1,0 +1,53 @@
+diff --git a/dreamplace/NonLinearPlace.py b/dreamplace/NonLinearPlace.py
+index 073bbf2..912e0da 100644
+--- a/dreamplace/NonLinearPlace.py
++++ b/dreamplace/NonLinearPlace.py
+@@ -121,0 +122,9 @@ class NonLinearPlace(BasicPlace.BasicPlace):
++                    # Programmatic research opt-in.  JSON configs cannot
++                    # enable a Python callback accidentally; normal runs
++                    # leave this attribute absent and keep the baseline.
++                    objective_fn = getattr(params, "net_moving_objective", None)
++                    if objective_fn is not None:
++                        model.set_net_moving_objective(objective_fn)
++                    selected_objective_fn = getattr(params, "selected_multi_pin_objective", None)
++                    if selected_objective_fn is not None:
++                        model.set_selected_multi_pin_objective(selected_objective_fn)
+@@ -941 +950 @@ class NonLinearPlace(BasicPlace.BasicPlace):
+-        return all_metrics
+\ No newline at end of file
++        return all_metrics
+diff --git a/dreamplace/PlaceObj.py b/dreamplace/PlaceObj.py
+index c1d45e2..99d389f 100644
+--- a/dreamplace/PlaceObj.py
++++ b/dreamplace/PlaceObj.py
+@@ -181,0 +182,4 @@ class PlaceObj(nn.Module):
++        # Optional research hook.  It is None by default so existing
++        # placements and baselines retain exactly the original objective.
++        self.net_moving_objective = None
++        self.selected_multi_pin_objective = None
+@@ -319,0 +324,4 @@ class PlaceObj(nn.Module):
++        if self.net_moving_objective is not None:
++            result = result + self.net_moving_objective(pos)
++        if self.selected_multi_pin_objective is not None:
++            result = result + self.selected_multi_pin_objective(pos)
+@@ -321,0 +330,17 @@ class PlaceObj(nn.Module):
++    def set_net_moving_objective(self, objective_fn):
++        """Install an optional differentiable research objective callback.
++
++        The callback receives the flattened placement tensor and must return
++        a scalar tensor on the same device/dtype.  No callback is installed
++        by default; this is the only opt-in boundary for the current research
++        probe and does not alter the standard DREAMPlace objective.
++        """
++        if objective_fn is not None and not callable(objective_fn):
++            raise TypeError("objective_fn must be callable or None")
++        self.net_moving_objective = objective_fn
++
++    def set_selected_multi_pin_objective(self, objective_fn):
++        if objective_fn is not None and not callable(objective_fn):
++            raise TypeError("selected_multi_pin_objective must be callable or None")
++        self.selected_multi_pin_objective = objective_fn
++
+@@ -1152,2 +1176,0 @@ class PlaceObj(nn.Module):
+-
+-

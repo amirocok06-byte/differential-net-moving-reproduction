@@ -1,0 +1,105 @@
+{
+  "stage": "P1A_STAGE4D_B8C",
+  "design": "mgc_des_perf_1",
+  "family": "mgc_des_perf",
+  "continuation_manifest": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/continuation_manifest.json",
+  "poisson_manifest": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/poisson_field_b5/poisson_manifest.json",
+  "algorithm1_manifest": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/algorithm1_b6/algorithm1_manifest.json",
+  "algorithm2_manifest": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/algorithm2_b7/algorithm2_manifest.json",
+  "grad_w_manifest": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/grad_w_b8w/grad_w_manifest.json",
+  "algorithm2_terminology": {
+    "old_field_name": "multi_pin_nets_contributing",
+    "actual_meaning": "multi-pin nets visited/processed by Algorithm 2",
+    "nonzero_contributing_multi_pin_nets": 0,
+    "selected_occurrences": 0,
+    "selected_unique_cells": 0
+  },
+  "g_total_definition": "elementwise G_two + G_multi on movable physical cells",
+  "g_total_implementation": "torch.add of frozen persisted tensors",
+  "g_two_sha256": "aa58687f1a238a26c7fb24b8aacdd73857c3ef12d080c35e5524e2216d058a98",
+  "g_multi_sha256": "636a8054bd66f2f99cc55b1e1f65c70d3071784be0f72474e7ff82615df412c9",
+  "g_total_equals_g_two_exact": true,
+  "nc_definition": "count movable physical cell centers whose frozen routing_overflow_map value is > 0",
+  "nc_implementation": "floor canonical movable coordinates by frozen 128x128 grid unit lengths, clamp indices, count overflow > 0",
+  "nc_population": "movable physical cells",
+  "nc_evaluation_state": "frozen continuation selected_best_position",
+  "nc_threshold": "> 0",
+  "NC": 6672,
+  "N": 112644,
+  "N_population": "movable physical cells",
+  "grad_w_definition": "weighted WA wirelength gradient from normal calc_obj_and_grad wirelength boundary",
+  "grad_w_sha256": "ddfc854eb71f06da8ae1e36bd01f4c7bfed4055c411ded91996a67f5ca9432f0",
+  "grad_w_l1": 58466.9140625,
+  "grad_c_definition": "G_total physical congestion gradient before lambda2 weighting",
+  "grad_c_population": "movable physical cells",
+  "grad_c_l1": 140532.265625,
+  "eq10_implementation": "(2*NC/N)*(||grad_W||_1/||grad_C||_1)",
+  "two_nc_over_n": 0.1184617023543198,
+  "grad_w_over_grad_c": 0.4160390794277191,
+  "lambda2": 0.04928470030426979,
+  "physical_to_optimizer_mapping": "optimizer rows [0:112644] receive physical gradient; rows [112644:113173] are optimizer fillers",
+  "filler_rows": 529,
+  "filler_p1a_gradient_policy": "zero, as required by source integration movable-only injection",
+  "fixed_io_p1a_gradient_policy": "not represented in optimizer population; zero",
+  "p1a_injection_semantics": "lambda2 * optimizer_Gc, consumed before apply_precond in calculator.py",
+  "p1a_injection_lifecycle_consumer": "src.calculator.calc_obj_and_grad STAGE4B_CONGESTION_GRAD",
+  "artifacts": {
+    "g_total_physical": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/p1a_artifact_b8/g_total_physical.pt",
+      "sha256": "aa58687f1a238a26c7fb24b8aacdd73857c3ef12d080c35e5524e2216d058a98",
+      "shape": [
+        112644,
+        2
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "l1": 140532.265625,
+      "l2": 591.303466796875,
+      "max_abs": 75.65555572509766,
+      "nonzero_entries": 170153,
+      "nonzero_cells": 85149
+    },
+    "optimizer_gc": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/p1a_artifact_b8/optimizer_gc.pt",
+      "sha256": "081e081f74c413f78d7c02343f8dbce6941e4e0665cb98b01ae402d43f99cc71",
+      "shape": [
+        113173,
+        2
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "l1": 140532.265625,
+      "l2": 591.303466796875,
+      "max_abs": 75.65555572509766,
+      "nonzero_entries": 170153,
+      "nonzero_cells": 85149
+    },
+    "p1a_injection": {
+      "path": "/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/p1a_artifact_b8/p1a_injection.pt",
+      "sha256": "b807481df96a5b1946a90aebf9314a14f3683208c71fb3e8c6c8887f3ff61316",
+      "shape": [
+        113173,
+        2
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "nan_count": 0,
+      "inf_count": 0,
+      "l1": 6926.0908203125,
+      "l2": 29.142208099365234,
+      "max_abs": 3.728661298751831,
+      "nonzero_entries": 170153,
+      "nonzero_cells": 85149
+    }
+  },
+  "runtimes_seconds": {
+    "construction": 0.02339307900001586
+  },
+  "no_replay": true,
+  "no_reroute": true,
+  "closure": "READY"
+}

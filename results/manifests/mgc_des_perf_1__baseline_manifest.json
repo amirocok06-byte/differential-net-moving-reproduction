@@ -1,0 +1,17 @@
+{
+  "stage":"P1A_STAGE4D_B2", "design":"mgc_des_perf_1", "family":"mgc_des_perf",
+  "seed":1000, "deterministic":true, "global_placement":true,
+  "use_route_force":false, "load_from_raw":true,
+  "xplace_entrypoint":"main.py -> src.run_placement_nesterov.run_placement_main_nesterov",
+  "run_status":"PASS", "gp_runtime_seconds":1.1321,
+  "best_iteration":706, "final_iteration":706,
+  "best_masked_hpwl":5438530.0, "best_exact_hpwl":5442924.0,
+  "best_gp_overflow":0.0406, "post_dp_hpwl":5824198.0,
+  "runtime_counts":{"movable_cells":112644,"fixed_cells":0,"total_nodes":113018,"nets":112878,"pins":319119,"io_pins":374},
+  "count_semantics":"Xplace runtime database counts; DEF header counts have different node/pin semantics",
+  "capture_policy":"best overflow-driven GP state before legalization/detail placement",
+  "canonical_capture_iteration":706,
+  "canonical_placement":"/home/amirocok/eda-research/results/p1a_stage4d/mgc_des_perf_1/gp_capture/2026-09-02-11:11:53_mgc_des_perf_1/output/stage4d_mgc_des_perf_1_gp.def",
+  "canonical_placement_sha256":"60a87a544d67c7215f10667e3ec3f85692e4a377cca95c4b3ae2a2d38453b774",
+  "next_stage":"CONTINUATION", "downstream_executed":false
+}

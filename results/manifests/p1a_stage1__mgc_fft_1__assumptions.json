@@ -1,0 +1,11 @@
+{
+  "poisson_centering": "MEAN_SUBTRACTION",
+  "m1": "INCLUDED",
+  "active_layers": [0, 1, 2, 3, 4],
+  "via_policy": "COUNT_ONCE_FROM_GGR_VIA_TENSOR",
+  "capacity": "EFFECTIVE_GGR_CAPACITY",
+  "coordinate_axes": "[layer, ix, iy]",
+  "poisson_bc": "NEUMANN",
+  "potential_normalization": "ZERO_MEAN",
+  "status": "D3_COMPATIBILITY_PATCH_VERIFIED"
+}

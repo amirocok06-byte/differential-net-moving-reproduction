@@ -1,0 +1,5 @@
+# Minimal observed dependencies for the local prototype tests.
+# CUDA/toolchain versions are documented in docs/provenance.md and are not
+# installed or selected by this file.
+torch==2.0.1
+pytest>=7,<9
